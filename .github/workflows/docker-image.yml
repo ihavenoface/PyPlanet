@@ -41,5 +41,5 @@ jobs:
           docker buildx build --platform linux/amd64,linux/arm64 \
             --output "type=image,push=${{ steps.detect.outputs.push }}" \
             --progress=plain \
-            --tag ghcr.io/pyplanet:$(date +%s) \
+            --tag ghcr.io/${{ github.repository }}:$(date +%s) \
           .
